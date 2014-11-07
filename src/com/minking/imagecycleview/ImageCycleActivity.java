@@ -39,7 +39,6 @@ public class ImageCycleActivity extends Activity {
 
 		@Override
 		public void onImageClick(int position, View imageView) {
-			// TODO 单击图片处理事件
 			Toast.makeText(ImageCycleActivity.this, "position->"+position, Toast.LENGTH_SHORT).show();
 		}
 
