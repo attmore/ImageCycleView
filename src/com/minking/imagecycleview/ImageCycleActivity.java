@@ -17,13 +17,10 @@ public class ImageCycleActivity extends Activity {
 
 	private ArrayList<String> mImageUrl = null;
 
-	private String imageUrl1 = "http://imgs.xiuna.com/xiezhen/2014-9-25/2/5562900520140919100645087.jpg";
-
-	private String imageUrl2 = "http://imgs.xiuna.com/xiezhen/2013-3-20/1/12.jpg";
-
-	private String imageUrl3 = "http://srimg1.meimei22.com/pic/suren/2014-9-24/1/8740_11329820378.jpg";
-	
-	private String imageUrl4 = "http://imgs.xiuna.com/xiezhen/2013-3-20/1/12.jpg";
+	private String[] imageUrls = {"http://imgs.xiuna.com/xiezhen/2014-9-25/2/5562900520140919100645087.jpg",
+			"http://imgs.xiuna.com/xiezhen/2013-3-20/1/12.jpg",
+			"http://srimg1.meimei22.com/pic/suren/2014-9-24/1/8740_11329820378.jpg",
+			"http://imgs.xiuna.com/xiezhen/2013-3-20/1/12.jpg"};
 
 
 	@Override
@@ -31,10 +28,9 @@ public class ImageCycleActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ad_cycle);
 		mImageUrl = new ArrayList<String>();
-		mImageUrl.add(imageUrl1);
-		mImageUrl.add(imageUrl2);
-		mImageUrl.add(imageUrl3);
-		mImageUrl.add(imageUrl4);
+		for(String str: imageUrls){
+			mImageUrl.add(str);
+		}
 		mAdView = (ImageCycleView) findViewById(R.id.ad_view);
 		mAdView.setImageResources(mImageUrl, mAdCycleViewListener);
 	}
